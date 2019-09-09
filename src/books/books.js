@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
-import './books.css';
+//import './books.css';
 
 class Books extends Component {
-
-//   render() {
-//     const page = this.state.showAddForm
-//       ? <AddBooksearch 
-//             showForm={show => this.setShowAddForm(show)}
-//             handleAdd={booksearch => this.AddBooksearch(booksearch)}
-//             />
-//       : <Header
-//             booksearches={this.state.booksearches}
-//             showForm={show => this.setShowAddForm(show)}
-//             /> 
-
-//     return (
-//       <div className="header">
-//         <h1>Google Book Search</h1>
-//         <SearchBar />
-//         <FilterBar />
-//       </div>
-//     );
-//   }
-// }
+    render() {
+        return (
+            <div className='book'>
+                <img
+                    src={this.props.volumeInfo.imageLinks.thumbnail}
+                    alt='book cover'/>
+                <div className='book-text-column'>
+                    <div className='the-text'>
+                        <h3>{this.props.volumeInfo.title}</h3>
+                        <p>{this.props.volumeInfo.authors}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
 
 export default Books;

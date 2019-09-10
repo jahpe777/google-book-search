@@ -20,6 +20,7 @@ class Header extends Component {
   _getBooks(params) {
     const queryItems = Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
     const url = 'https://www.googleapis.com/books/v1/volumes?' + queryItems;
+    console.log(url)
     const options = {
       method: 'GET',
       headers: {
@@ -87,7 +88,6 @@ class Header extends Component {
         <h1>Google Book Search</h1>
         <SearchBar 
           submitSearch={() => this.submitSearch()}
-          searchTerm = {this.props.searchTerm}
           updateTerm={term => this._updateTerm(term)}
           />
         {this.state.error}

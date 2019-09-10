@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import './header.css';
+import './header.css';
 import SearchBar from '../searchBar/searchBar.js'
 import FilterBar from '../filterBar/filterBar.js'
 
@@ -12,7 +12,7 @@ class Header extends Component {
     this.state = {
       searchTerm: '',
       printType: 'all',
-      bookType: 'all',
+      bookType: null,
       error: null
     };
   }

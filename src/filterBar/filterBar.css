@@ -1,0 +1,7 @@
+.filter-bar{
+    background: rgb(231, 231, 231);
+    padding: 5px;
+}
+label, select{
+    margin: 5px;
+}

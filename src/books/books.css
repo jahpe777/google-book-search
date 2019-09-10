@@ -1,0 +1,14 @@
+.book{
+    border-bottom: lightgray 1px solid;
+    padding: 10px;
+    display: flex;
+}
+img{
+    float: left;
+    padding: 5px;
+    align-self: center;
+}
+.book-text-column{
+    display: flex;
+    text-align: center;
+}

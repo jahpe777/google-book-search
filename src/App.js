@@ -11,6 +11,7 @@ class App extends Component {
       books: [],
       error: null
     };
+    this._updateList = this._updateList.bind(this);
   }
 
   _updateList(data) {
@@ -24,13 +25,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header 
-        updateList={(data) => this._updateList(data)} 
+        updateList = {this._updateList}
         />
-        {this.state.books.map(book => {
-          return <p>{book.volumeInfo.title}</p>
-        })}
         <BookList 
-          books = {this.state.books} />
+          books = {this.state.books} 
+        />
       </div>
     )};
 }

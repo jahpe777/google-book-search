@@ -18,7 +18,7 @@ class Header extends Component {
   }
 
   _getBooks() {
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${this.state.searchTerm}&printType=magazines`;
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${this.state.searchTerm}`;
     const options = {
       method: 'GET',
       headers: {

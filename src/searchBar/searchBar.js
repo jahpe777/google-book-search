@@ -11,7 +11,7 @@ class SearchBar extends Component {
                     onChange={term => this.props.updateTerm(term)} 
                     />
                 <button 
-                    onClick={() => this.props.getBooks()}
+                    onClick={() => this.props.submitSearch()}
                     >
                     Search
                 </button>

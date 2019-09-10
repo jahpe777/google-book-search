@@ -11,8 +11,8 @@ class Header extends Component {
     super(props);
     this.state = {
       searchTerm: '',
-      printType: '',
-      bookType: '',
+      printType: 'all',
+      bookType: 'all',
       error: null
     };
   }
@@ -55,10 +55,12 @@ class Header extends Component {
   }
 
   _filterPrint(option) {
-    this.setState({
-      printType: option
-    });
-    this.submitSearch();
+    const filterByPrintResults = this.props.books.filter(book => book.printType === option);
+    this.props.updateList(filterByPrintResults);
+  //   this.setState({
+  //     printType: option
+  //   });
+  //   // this.submitSearch();
   }
 
   _filterBook(option) {
@@ -68,7 +70,7 @@ class Header extends Component {
   }
 
   submitSearch() {
-
+    
   }
 
   render() {
